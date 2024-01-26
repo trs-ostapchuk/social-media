@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-sm-4"></div>
     <div class="col-sm-4">
-        <h1>Sign Up</h1>
+        <h1>Log in</h1>
         {% for message in messages %}
         <h5 class="alert alert-danger">{{ message }}</h5>
         {% endfor %}
@@ -16,16 +16,7 @@
                        placeholder="Enter user name">
             </div>
             <div class="form-group">
-                <input type="text" name="email" class="form-control" id="exampleInputEmail2"
-                       aria-describedby="emailHelp"
-                       placeholder="Enter email">
-            </div>
-            <div class="form-group">
                 <input type="password" name="password" class="form-control" id="exampleInputPassword1"
-                       placeholder="Enter password">
-            </div>
-            <div class="form-group">
-                <input type="password" name="password2" class="form-control" id="exampleInputPassword2"
                        placeholder="Enter password">
             </div>
             <!--            <div class="form-check">-->
@@ -33,10 +24,10 @@
             <!--                <label class="form-check-label" for="exampleCheck1">I Agree Terms and Conditions</label>-->
             <!--            </div>-->
             <br>
-            <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+            <button type="submit" class="btn btn-primary btn-block">Log in</button>
             <br>
             <div class="text-center">
-                <p class="text-base">Do you have an account? <a href="/signin">Login</a></p>
+                <p class="text-base">Not registered? <a href="/signup">Create an account</a></p>
             </div>
         </form>
     </div>
