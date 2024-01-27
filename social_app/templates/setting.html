@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+        <h3><a href="/">Home</a> / Account settings for <b>{{ user.username }}</b></h3>
+        <hr>
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Profile image</label>
+                <div>
+                    <img src="{{ user_profile.profileimg.url }}" height="300">
+                </div>
+                <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+            <div class="form-group">
+                <label for="comment">BIO:</label>
+                <textarea name="bio" class="form-control" rows="5" id="comment">{{ user_profile.bio }}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="comment">Location:</label>
+                <input type="text" name="location" value="{{ user_profile.location }}" class="form-control" id="exampleInputPassword1">
+            </div>
+            <br>
+            <button type="button" class="btn btn-danger"><a href="/">Cancel</a></button>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+    <div class="col-sm-3"></div>
+</div>
+{% endblock %}
