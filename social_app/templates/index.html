@@ -57,9 +57,11 @@
                                 <img src="{{ post.image.url }}" width="600">
                             </a>
                             {% endif %}
-                            <button type="button" class="btn btn-default btn-sm">
-                                <span class="glyphicon glyphicon-thumbs-up"></span> Like {{ post.no_of_likes }}
-                            </button>
+                            <a href="/like-post?post_id={{ post.id }}">
+                                <button type="button" class="btn btn-default btn-sm">
+                                    <span class="glyphicon glyphicon-thumbs-up"></span> Like {{ post.no_of_likes }}
+                                </button>
+                            </a>
                             <p>Posted - {{ post.created_at }}</p>
                             <p><a href="#">{{ post.user }}:</a> {{ post.caption }}</p>
                         </div>
